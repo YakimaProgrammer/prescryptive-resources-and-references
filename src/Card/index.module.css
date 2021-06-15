@@ -1,0 +1,41 @@
+.Card {
+    display: table;
+    width: 100%;
+    background-color: #f5f4f9;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100px;
+    min-width: 200px;
+}
+
+.Card > div {
+    display: table-row;
+    height: calc(100% / 3);
+}
+
+.Card > div > p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.description .detailText {
+    font-size: 18px;
+}
+
+.detailText {
+    color: #9797a0;
+}
+
+.description {
+    font-weight: bold;
+    color: #2a2a35;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.icon {
+    filter: invert(45%) sepia(26%) saturate(2724%) 
+            hue-rotate(163deg) brightness(100%) contrast(95%);
+    padding: 5px;
+    vertical-align: middle;
+}

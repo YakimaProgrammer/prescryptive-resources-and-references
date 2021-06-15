@@ -1,0 +1,86 @@
+[
+    {
+        "category": "Training",
+        "description": "Prescryptive Platform Manual.",
+        "linkType": "external",
+        "linkTo": "#"
+    },
+    {
+        "category": "Training",
+        "description": "Welcome to Pharmacy portal.",
+        "linkType": "video",
+        "linkTo": "#"
+    },
+    {
+        "category": "Billing Instructions",
+        "description": "Financial Set-Up, Payer Sheet.",
+        "linkType": "document",
+        "linkTo": "#"
+    },
+    {
+        "category": "Billing Instructions",
+        "description": "Billing instructions for PCR Testing.",
+        "linkType": "document",
+        "linkTo": "#"
+    },
+    {
+        "category": "Billing Instructions",
+        "description": "Billing instructions for Antigen testing.",
+        "linkType": "document",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing materials",
+        "description": "NCPA Guidance for Community []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing materials",
+        "description": "CDC Poster: How to put on PPE, How to []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing materials",
+        "description": "APhA COVID-19: Demystifying Testing []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing materials",
+        "description": "NCPA Best Practices: Applying for a CLIA []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing materials",
+        "description": "Form for CLIA Certificate of Waiver.",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing materials",
+        "description": "MMWRL Good Lab Practices for CLIA-W []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Training",
+        "description": "Pharmacists Authorized To Order []",
+        "linkType": "external",
+        "linkTo": "#"
+    },
+    {
+        "category": "Training",
+        "description": "Prescryptive Pharmacy Relations.",
+        "linkType": "external",
+        "linkTo": "#"
+    },
+    {
+        "category": "TESTING",
+        "description": "Prescryptive Platform Manual. Welcome to Pharmacy portal. Financial Set-Up, Payer Sheet. Prescryptive Pharmacy Relations. Form for CLIA Certificate of Waiver. Billing instructions for Antigen testing.",
+        "linkType": "pdf",
+        "linkTo": "#"
+    }
+]
