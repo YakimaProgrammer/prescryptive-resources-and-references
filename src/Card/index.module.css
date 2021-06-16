@@ -30,6 +30,11 @@
     color: #9797a0;
 }
 
+/* when you want that color but not font-size=18px! */
+.showMore {
+    color: #9797a0;
+}
+
 .description {
     font-weight: bold;
     color: #2a2a35;

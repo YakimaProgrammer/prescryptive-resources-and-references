@@ -26,10 +26,21 @@ const resourceType = {
 };
 
 class Card extends Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            fullTextShown: false
+        }
+    }
     render() {
         var description = this.props.description;
         if(description.length > 57) {
-            description = description.slice(0,57) + "...";
+            //Ah yes, got multiple elements? Just throw a fragment at it!
+            description = <>
+                <span title={description}>{description.slice(0,57)}</span>
+                <span className={style.showMore}>...</span>
+            </>;
         }
         
         return (
