@@ -29,8 +29,6 @@
 .description {
     font-weight: bold;
     color: #2a2a35;
-    text-overflow: ellipsis;
-    overflow: hidden;
 }
 
 .icon {
@@ -38,4 +36,8 @@
             hue-rotate(163deg) brightness(100%) contrast(95%);
     padding: 5px;
     vertical-align: middle;
+}
+
+.cardLink {
+    text-decoration: none;
 }
