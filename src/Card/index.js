@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { FadingTextTransition } from "./FadingTextTransition";
 import style from "./index.module.css";
 
 import pdf from "../assets/pdf.svg";
@@ -26,45 +27,15 @@ const resourceType = {
 };
 
 class Card extends Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = {
-            fullTextShown: false,
-            animationComplete: false
-        }
-    }
     render() {
-        console.log("rendering!");
-        var description = this.props.description;
-        if(this.props.description.length > 57) {
-            description = <>
-                <span className={
-                    !this.state.fullTextShown ? 
-                    style.active :
-                    style.hidden
-                }>
-                    <span title={this.props.description}>
-                        {this.props.description.slice(0,57)}
-                    </span>
-                    <span 
-                        className={style.showMore} 
-                        onClick={this.expandText.bind(this)}
-                    >...</span>
-                </span>
-                
-                <span className={
-                    this.state.fullTextShown ? 
-                    (
-                        this.state.animationComplete ?
-                        style.active :
-                        style.invisible
-                    ) :
-                    style.hidden
-                }>
-                    {this.props.description}
-                </span>
-            </>;
+        var description;
+        if (this.props.description.length > 57) {
+            description = <FadingTextTransition
+                shortText={this.props.description.slice(0,57)}
+                fullText={this.props.description}
+            />
+        } else {
+            description = <p>{this.props.description}</p>;
         }
         
         return (
@@ -76,12 +47,7 @@ class Card extends Component {
                 </div>
                 
                 <div>
-                    <p 
-                        ref={this.captureAccordion.bind(this)} 
-                        className={style.description}
-                    >
-                        {description}
-                    </p>
+                    {description}
                 </div>
                 
                 <div>
@@ -104,32 +70,8 @@ class Card extends Component {
         );
     }
     
-    componentDidUpdate() {
-        if (!this.state.animationComplete) {
-            var span = this.accordion.children[1];
-            var newHeight = span.offsetHeight;
-            span.className = style.hidden;
-            this.accordion.style.height = newHeight + "px";
-            setTimeout((function() {
-                this.setState({
-                   animationComplete: true 
-                });
-            }).bind(this), 500);
-        }
-    }
-    
     captureLink(el) {
         this.link = el;
-    }
-    
-    captureAccordion(el) {
-        this.accordion = el;
-    }
-    
-    expandText() {
-        this.setState({
-            fullTextShown: true
-        });
     }
 }
 

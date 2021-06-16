@@ -1,0 +1,17 @@
+.transitionHandler {
+    transition: opacity 0.5s ease;
+    transition: height 0.5s ease;
+}
+
+.inital {
+    height: 36px;
+    overflow: hidden;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.showMore {
+    color: #9797a0;
+}
