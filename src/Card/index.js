@@ -27,6 +27,11 @@ const resourceType = {
 
 class Card extends Component {
     render() {
+        var description = this.props.description;
+        if(description.length > 57) {
+            description = description.slice(0,57) + "...";
+        }
+        
         return (
             <a href={this.props.linkTo} className={style.cardLink}>
                 <div className={style.Card}>
@@ -38,7 +43,7 @@ class Card extends Component {
                     
                     <div>
                         <p className={style.description}>
-                            {this.props.description}
+                            {description}
                         </p>
                     </div>
                     
