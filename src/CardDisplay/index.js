@@ -13,6 +13,7 @@ class CardDisplay extends Component {
                         category={resourceDefinitions[i].category}
                         description={resourceDefinitions[i].description}
                         linkType={resourceDefinitions[i].linkType}
+                        linkTo={resourceDefinitions[i].linkTo}
                     />
                 </div>
             )

@@ -28,7 +28,7 @@ const resourceType = {
 class Card extends Component {
     render() {
         return (
-            <a href={this.props.linkTo}>
+            <a href={this.props.linkTo} className={style.cardLink}>
                 <div className={style.Card}>
                     <div>
                         <p className={style.detailText}>

@@ -1,3 +1,7 @@
+.cardLink {
+    text-decoration: none;
+}
+
 .Card {
     display: table;
     width: 100%;
@@ -10,7 +14,7 @@
 
 .Card > div {
     display: table-row;
-    height: calc(100% / 3);
+    height: 33.33%;
 }
 
 .Card > div > p {
@@ -29,8 +33,6 @@
 .description {
     font-weight: bold;
     color: #2a2a35;
-    text-overflow: ellipsis;
-    overflow: hidden;
 }
 
 .icon {
