@@ -90,7 +90,7 @@ class FadingTextTransition extends Component {
                 this.setState({
                     animationState: 3
                 });
-                this.div.style.height = newHeight;
+                this.div.style.height = newHeight + "px";
                 await sleep(500);
                 
                 //Now render the full text

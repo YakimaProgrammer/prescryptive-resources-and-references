@@ -12,8 +12,6 @@
     height: 100px;
     min-width: 200px;
     cursor: pointer;
-    
-    transition: height 0.2s ease;
 }
 
 .Card > div {

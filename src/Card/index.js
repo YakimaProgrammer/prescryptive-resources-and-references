@@ -46,7 +46,7 @@ class Card extends Component {
                     </p>
                 </div>
                 
-                <div>
+                <div className={style.description}>
                     {description}
                 </div>
                 
