@@ -16,7 +16,7 @@
 
 .Card > div {
     display: table-row;
-    height: 33.33%;
+    height: 32px;
 }
 
 .Card > div > p {

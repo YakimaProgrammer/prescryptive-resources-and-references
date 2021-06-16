@@ -98,6 +98,11 @@ class FadingTextTransition extends Component {
                     animationState: 4
                 });
                 
+                /*Don't lock the height of the text once the animation is 
+                complete. Otherwise the text overflows in weird ways when the
+                browser window is resized. */
+                this.div.style.height = "auto";
+                
             }).bind(this)().catch(err => console.log(err));
         }
     }
