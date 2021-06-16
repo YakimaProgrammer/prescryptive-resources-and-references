@@ -11,6 +11,9 @@
 
 .showMore {
     color: #9797a0;
+    position: relative;
+    padding: 15px;
+    left: -15px;
 }
 
 .transitionHandler > div {
