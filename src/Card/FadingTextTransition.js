@@ -19,7 +19,9 @@ class FadingTextTransition extends Component {
             case 0:
                 return (
                     <div>
-                        <span>{this.props.shortText}</span>
+                        <span title={this.props.fullText}>
+                            {this.props.shortText}
+                        </span>
                         <span 
                             onClick={this.playAnimation.bind(this)}
                             className={style.showMore}
