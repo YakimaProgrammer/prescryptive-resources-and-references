@@ -26,6 +26,17 @@ const resourceType = {
     }
 };
 
+function getSelectedText() {
+    //https://stackoverflow.com/a/5379408
+    var text = "";
+    if (window.getSelection) {
+        text = window.getSelection().toString();
+    } else if (document.selection && document.selection.type != "Control") {
+        text = document.selection.createRange().text;
+    }
+    return text;
+}
+
 class Card extends Component {
     render() {
         var description;
@@ -39,7 +50,7 @@ class Card extends Component {
         }
         
         return (
-            <div className={style.Card}>
+            <div onClick={this.clickLink.bind(this)} className={style.Card}>
                 <div>
                     <p className={style.detailText}>
                         {this.props.category}
@@ -72,6 +83,13 @@ class Card extends Component {
     
     captureLink(el) {
         this.link = el;
+    }
+    
+    clickLink() {
+        //Being able to select text WITHOUT activating the link is a nice touch
+        if (!getSelectedText()) {
+            this.link.click();
+        }
     }
 }
 

@@ -74,7 +74,9 @@ class FadingTextTransition extends Component {
         );
     }
     
-    playAnimation() {
+    playAnimation(e) {
+        e.stopPropagation();
+        
         if (this.state.animationState === 0) {
             (async function() {
                 this.setState({
