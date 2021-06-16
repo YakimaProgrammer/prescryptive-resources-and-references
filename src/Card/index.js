@@ -30,47 +30,106 @@ class Card extends Component {
         super(props);
         
         this.state = {
-            fullTextShown: false
+            fullTextShown: false,
+            animationComplete: false
         }
     }
     render() {
+        console.log("rendering!");
         var description = this.props.description;
-        if(description.length > 57) {
-            //Ah yes, got multiple elements? Just throw a fragment at it!
+        if(this.props.description.length > 57) {
             description = <>
-                <span title={description}>{description.slice(0,57)}</span>
-                <span className={style.showMore}>...</span>
+                <span className={
+                    !this.state.fullTextShown ? 
+                    style.active :
+                    style.hidden
+                }>
+                    <span title={this.props.description}>
+                        {this.props.description.slice(0,57)}
+                    </span>
+                    <span 
+                        className={style.showMore} 
+                        onClick={this.expandText.bind(this)}
+                    >...</span>
+                </span>
+                
+                <span className={
+                    this.state.fullTextShown ? 
+                    (
+                        this.state.animationComplete ?
+                        style.active :
+                        style.invisible
+                    ) :
+                    style.hidden
+                }>
+                    {this.props.description}
+                </span>
             </>;
         }
         
         return (
-            <a href={this.props.linkTo} className={style.cardLink}>
-                <div className={style.Card}>
-                    <div>
-                        <p className={style.detailText}>
-                            {this.props.category}
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <p className={style.description}>
-                            {description}
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <p className={style.detailText}>
+            <div className={style.Card}>
+                <div>
+                    <p className={style.detailText}>
+                        {this.props.category}
+                    </p>
+                </div>
+                
+                <div>
+                    <p 
+                        ref={this.captureAccordion.bind(this)} 
+                        className={style.description}
+                    >
+                        {description}
+                    </p>
+                </div>
+                
+                <div>
+                    <p className={style.detailText}>
+                        <a 
+                            href={this.props.linkTo} 
+                            className={style.cardLink}
+                            ref={this.captureLink.bind(this)}
+                        >
                             <img 
                                 src={resourceType[this.props.linkType].img} 
                                 className={style.icon}
                                 alt=""
                             />
                             {resourceType[this.props.linkType].note}
-                        </p>
-                    </div>
+                        </a>
+                    </p>
                 </div>
-            </a>
+            </div>
         );
+    }
+    
+    componentDidUpdate() {
+        if (!this.state.animationComplete) {
+            var span = this.accordion.children[1];
+            var newHeight = span.offsetHeight;
+            span.className = style.hidden;
+            this.accordion.style.height = newHeight + "px";
+            setTimeout((function() {
+                this.setState({
+                   animationComplete: true 
+                });
+            }).bind(this), 500);
+        }
+    }
+    
+    captureLink(el) {
+        this.link = el;
+    }
+    
+    captureAccordion(el) {
+        this.accordion = el;
+    }
+    
+    expandText() {
+        this.setState({
+            fullTextShown: true
+        });
     }
 }
 
