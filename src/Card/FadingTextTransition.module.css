@@ -13,14 +13,6 @@
     color: #9797a0;
 }
 
-.showMore:hover:after {
-    content: url("../assets/caret-down-fill.svg");
-    /*
-    position: relative;
-    top: 10px;
-    */ /*works, but the caret gets cut off and the span moves a little */
-}
-
 .transitionHandler > div {
     transition: inherit;
 }
