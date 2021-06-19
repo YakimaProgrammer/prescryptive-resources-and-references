@@ -1,0 +1,16 @@
+{
+  "short_name": "Resources and References",
+  "name": "Prescryptive - Helpful Resources and References",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "140x140",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "orientation": "landscape"
+}
