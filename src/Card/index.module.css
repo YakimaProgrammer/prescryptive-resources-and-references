@@ -12,6 +12,11 @@
     height: 100px;
     min-width: 200px;
     cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.Card:hover {
+    background-color: #e0e0e0;
 }
 
 .Card > div {
