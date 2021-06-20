@@ -1,0 +1,43 @@
+.menuDiv {
+    background-color: #6240a1;
+    width: 20%;
+    min-width: 200px;
+    height: 100%;
+    color: white;
+    text-align: center;
+}
+
+.menuDiv a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.providerSelector {
+    
+}
+
+.paddingDiv {
+    /*height: 100%;*/
+}
+
+.menuOptions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuOptions > li {
+    padding: 5px;
+    text-align: left;
+}
+
+.menuOptions > li > a > img {
+    padding: 5px 15px 5px 15px;
+    vertical-align: middle;
+}
