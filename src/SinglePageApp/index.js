@@ -42,11 +42,11 @@ class SPA extends Component {
                         <div className={style.content}>
                             <Route 
                                 exact 
-                                to={["/", "/resources"]} 
+                                path={["/", "/resources"]} 
                                 component={CardDisplay}
                             />
                             <Route 
-                                to={["/appointments", "/customers", "/report",
+                                path={["/appointments", "/customers", "/report",
                                      "/hours", "/service", "/signOut", "/legal",
                                      "/privacy"]} 
                                 component={PlaceholderPage}
