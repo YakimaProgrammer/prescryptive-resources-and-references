@@ -4,8 +4,8 @@ import {
     Route
 } from "react-router-dom";
 import { PlaceholderPage } from "../PlaceholderPage";
-import { CardDisplay } from "../CardDisplay";
-import { Menu } from "./Menu";
+import { ResourcesPage } from "../ResourcesPage";
+import { Menu } from "../Menu";
 import style from "./index.module.css";
 
 class SPA extends Component {
@@ -43,7 +43,7 @@ class SPA extends Component {
                             <Route 
                                 exact 
                                 path={["/", "/resources"]} 
-                                component={CardDisplay}
+                                component={ResourcesPage}
                             />
                             <Route 
                                 path={["/appointments", "/customers", "/report",

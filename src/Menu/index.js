@@ -1,8 +1,8 @@
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { withRouter } from 'react-router-dom';
+import style from "./index.module.css";
 import logo from "../assets/prescryptive/logotext.png";
-import style from "./MenuStyle.module.css";
 import calendar from "../assets/bootstrap-icons/calendar-event.svg";
 import badge from "../assets/bootstrap-icons/person-badge.svg";
 import chart from "../assets/bootstrap-icons/clipboard-data.svg";

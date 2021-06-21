@@ -19,4 +19,6 @@
 
 .content {
     padding: 5px;
+    top: -45px;
+    position: relative;
 }

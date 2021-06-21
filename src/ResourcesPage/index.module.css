@@ -1,0 +1,12 @@
+.asTable {
+    display: table;
+}
+
+.asTable > div {
+    display: table-row;
+}
+
+.asTable > div > div {
+    display: table-cell;
+    padding: 0px 15px 18px 15px;
+}
