@@ -76,46 +76,55 @@ class Menu extends Component {
         super(props);
         
         this.state = {
-            provider: "Please select your provider from the drop down menu"
-        }
+            provider: "Please select your provider from the dropdown menu",
+            userHasMadeASelection: false
+        };
     }
     render() {
         return (
             <div className={style.menuDiv}>
-                <img src={logo} className={style.logo} alt="Prescryptive"/>
-                <select 
-                    className={style.providerSelector} 
-                    onInput={this.updateProvider.bind(this)}
-                >
-                    <option value="Pharmacy 123">Pharmacy 123</option>
-                    <option value="Pharmacy ABC">Pharmacy ABC</option>
-                    <option value="Pharmacy Foo">Pharmacy Foo</option>
-                    <option value="Pharmacy Bar">Pharmacy Bar</option>
-                </select>
-                <p>{this.state.provider}</p>
+                <div>
+                    <img src={logo} className={style.logo} alt="Prescryptive"/>
+                    <select 
+                        className={style.providerSelector} 
+                        onInput={this.updateProvider.bind(this)}
+                    >
+                        <option 
+                            value="" 
+                            disabled={this.state.userHasMadeASelection}
+                        >Choose a provider</option>
+                        {this.props.children}
+                    </select>
+                    <p>{this.state.provider}</p>
+                    
+                    {buildMenu(PAGES)}
+                </div>
                 
-                {buildMenu(PAGES)}
-                <div className={style.paddingDiv}>&nbsp;</div>
-                {buildMenu(SETTINGS)}
+                <div className={style.paddingDiv}></div>
                 
-                <hr />
-                <p>
-                    <u>
-                        <NavLink to="/legal">Terms & Conditions</NavLink>
-                    </u>
-                    &nbsp;|&nbsp;
-                    <u>
-                        <NavLink to="/privacy">Privacy Policy</NavLink>
-                    </u>
-                </p>
-                <p>© Prescryptive Health, Inc.</p>
+                <div>
+                    {buildMenu(SETTINGS)}
+                    
+                    <hr />
+                    <p>
+                        <u>
+                            <NavLink to="/legal">Terms & Conditions</NavLink>
+                        </u>
+                        &nbsp;|&nbsp;
+                        <u>
+                            <NavLink to="/privacy">Privacy Policy</NavLink>
+                        </u>
+                    </p>
+                    <p>© Prescryptive Health, Inc.</p>
+                </div>
             </div>
         )
     }
     
     updateProvider(e) {
         this.setState({
-           provider: e.target.value 
+            provider: e.target.value,
+            userHasMadeASelection: true
         });
     }
 }

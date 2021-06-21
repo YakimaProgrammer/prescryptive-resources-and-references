@@ -2,9 +2,13 @@
     background-color: #6240a1;
     width: 20%;
     min-width: 200px;
-    height: 100%;
     color: white;
     text-align: center;
+    padding: 5px;
+    height: calc(100% - 10px);
+    
+    display: flex;
+    flex-direction: column;
 }
 
 .menuDiv a {
@@ -13,17 +17,21 @@
 }
 
 .logo {
-    width: 100%;
+    width: 70%;
     height: auto;
+    margin: auto;
     display: block;
+    padding: 10px;
 }
 
 .providerSelector {
-    
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .paddingDiv {
-    /*height: 100%;*/
+    flex: 1;
 }
 
 .menuOptions {
@@ -38,6 +46,7 @@
 }
 
 .menuOptions > li > a > img {
-    padding: 5px 15px 5px 15px;
+    padding: 10px 15px 10px 15px;
     vertical-align: middle;
+    filter: invert(1);
 }
