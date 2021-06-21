@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 import logo from "../assets/prescryptive/logotext.png";
 import style from "./MenuStyle.module.css";
 import calendar from "../assets/bootstrap-icons/calendar-event.svg";
@@ -10,11 +11,13 @@ import clipboard from "../assets/bootstrap-icons/clipboard.svg";
 import questionMark from "../assets/bootstrap-icons/question-circle-fill.svg";
 import person from "../assets/bootstrap-icons/person-fill.svg";
 
-function buildMenu(data) {
+function buildMenu(data, currentUrl) {
     var rows = [];
     for (let i = 0; i < data.length; i++) {
         rows.push( 
-            <li key={i}>
+            <li key={i} id={
+                    data[i].linkTo === currentUrl ? style.activePage : null
+                }>
                 <NavLink to={data[i].linkTo}>
                     <img src={data[i].icon} alt="" />
                     <span>{data[i].pageName}</span>
@@ -71,7 +74,7 @@ const SETTINGS = [
     }
 ];
 
-class Menu extends Component {
+class UnconnectedMenu extends Component {
     constructor(props) {
         super(props);
         
@@ -81,6 +84,7 @@ class Menu extends Component {
         };
     }
     render() {
+        console.log(this.props);
         return (
             <div className={style.menuDiv}>
                 <div>
@@ -97,13 +101,13 @@ class Menu extends Component {
                     </select>
                     <p>{this.state.provider}</p>
                     
-                    {buildMenu(PAGES)}
+                    {buildMenu(PAGES, this.props.location.pathname)}
                 </div>
                 
                 <div className={style.paddingDiv}></div>
                 
                 <div>
-                    {buildMenu(SETTINGS)}
+                    {buildMenu(SETTINGS, this.props.location.pathname)}
                     
                     <hr />
                     <p>
@@ -128,5 +132,9 @@ class Menu extends Component {
         });
     }
 }
+
+/* Being able to access the current URL is nice for highlighting the current 
+page in the menu! */
+const Menu = withRouter(props => <UnconnectedMenu {...props}/>)
 
 export { Menu };

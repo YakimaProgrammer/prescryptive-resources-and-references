@@ -42,6 +42,8 @@
 
 .menuOptions > li {
     text-align: left;
+    /* I want just a touch of space between rows */
+    margin: 2px; 
 }
 
 .menuOptions > li > a {
@@ -67,10 +69,28 @@
 }
 
 .menuOptions > li:hover {
-    background-color: white;
+    background-color: #E2DCEE;
     color: #6240a1;
 }
 
 .menuOptions > li:hover > a > img {
-    filter:invert(29%) sepia(14%) saturate(4852%) hue-rotate(231deg) brightness(90%) contrast(91%); 
+    filter: invert(29%) sepia(14%) saturate(4852%) hue-rotate(231deg) 
+        brightness(90%) contrast(91%);
+}
+
+/* unfortunately, I can't do compositions when I use pseudo-classes */
+/* I also have to use ids because of CSS precedence */
+
+#activePage {
+    background-color: white;
+    color: #6240a1;
+    /* Why did I do .75s and not .5s like every where else? Well, the effect
+    is very subtle, and if it happens too fast, it looks just as clunky as if
+    I didn't use the transition at all! */
+    transition: background-color .75s ease; 
+}
+
+#activePage > a > img {
+    filter: invert(29%) sepia(14%) saturate(4852%) hue-rotate(231deg) 
+            brightness(90%) contrast(91%);
 }
