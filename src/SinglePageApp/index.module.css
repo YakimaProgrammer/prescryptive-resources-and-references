@@ -1,0 +1,22 @@
+.asTable {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.asTable > div {
+    display: table-row;
+}
+
+.asTable > div > div {
+    display: table-cell;
+}
+
+.menu {
+    width: 20%;
+    min-width: 200px;
+}
+
+.content {
+    padding: 5px;
+}

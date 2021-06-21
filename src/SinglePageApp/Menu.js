@@ -84,7 +84,6 @@ class UnconnectedMenu extends Component {
         };
     }
     render() {
-        console.log(this.props);
         return (
             <div className={style.menuDiv}>
                 <div>
