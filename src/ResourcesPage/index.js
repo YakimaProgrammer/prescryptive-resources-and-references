@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { CardDisplay } from "./CardDisplay";
-import style from "./index.module.css";
+import { FilterBar } from "./FilterBar";
 
 class ResourcesPage extends Component {
     render() {
@@ -12,15 +12,8 @@ class ResourcesPage extends Component {
                    orci finibus nulla, a tempor quam arcu et est. Pellentesque 
                    ut neque posuere, dapibus risus ac, dapibus diam. Etiam.
                 </p>
-                <div className={style.asTable}>
-                    <div>
-                        <div>View All</div>
-                        <div>Training</div>
-                        <div>Billing Instructions</div>
-                        <div>Marketing Materials</div>
-                    </div>
-                </div>
                 
+                <FilterBar />
                 <CardDisplay />
             </div>
         )
