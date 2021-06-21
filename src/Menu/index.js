@@ -86,40 +86,45 @@ class UnconnectedMenu extends Component {
     render() {
         return (
             <div className={style.menuDiv}>
-                <div>
-                    <img src={logo} className={style.logo} alt="Prescryptive"/>
-                    <select 
-                        className={style.providerSelector} 
-                        onInput={this.updateProvider.bind(this)}
-                    >
-                        <option 
-                            value="" 
-                            disabled={this.state.userHasMadeASelection}
-                        >Choose a provider</option>
-                        {this.props.children}
-                    </select>
-                    <p>{this.state.provider}</p>
+                <div className={style.menuContent}>
+                    <div>
+                        <div>
+                            <img src={logo} className={style.logo} alt="Prescryptive"/>
+                            <select 
+                                className={style.providerSelector} 
+                                onInput={this.updateProvider.bind(this)}
+                            >
+                                <option 
+                                    value="" 
+                                    disabled={this.state.userHasMadeASelection}
+                                >Choose a provider</option>
+                                {this.props.children}
+                            </select>
+                            <p>{this.state.provider}</p>
+                            
+                            {buildMenu(PAGES, this.props.location.pathname)}
+                        </div>
                     
-                    {buildMenu(PAGES, this.props.location.pathname)}
+                        <div className={style.paddingDiv}></div>
+                    
+                        <div>
+                            {buildMenu(SETTINGS, this.props.location.pathname)}
+                            
+                            <hr />
+                            <p>
+                                <u>
+                                    <NavLink to="/legal">Terms & Conditions</NavLink>
+                                </u>
+                                &nbsp;|&nbsp;
+                                <u>
+                                    <NavLink to="/privacy">Privacy Policy</NavLink>
+                                </u>
+                            </p>
+                            <p>© Prescryptive Health, Inc.</p>
+                        </div>
+                    </div>
                 </div>
-                
                 <div className={style.paddingDiv}></div>
-                
-                <div>
-                    {buildMenu(SETTINGS, this.props.location.pathname)}
-                    
-                    <hr />
-                    <p>
-                        <u>
-                            <NavLink to="/legal">Terms & Conditions</NavLink>
-                        </u>
-                        &nbsp;|&nbsp;
-                        <u>
-                            <NavLink to="/privacy">Privacy Policy</NavLink>
-                        </u>
-                    </p>
-                    <p>© Prescryptive Health, Inc.</p>
-                </div>
             </div>
         )
     }
