@@ -89,7 +89,11 @@ class UnconnectedMenu extends Component {
                 <div className={style.menuContent}>
                     <div>
                         <div>
-                            <img src={logo} className={style.logo} alt="Prescryptive"/>
+                            <img 
+                                src={logo} 
+                                className={style.logo} 
+                                alt="Prescryptive"
+                            />
                             <select 
                                 className={style.providerSelector} 
                                 onInput={this.updateProvider.bind(this)}
@@ -113,11 +117,15 @@ class UnconnectedMenu extends Component {
                             <hr />
                             <p>
                                 <u>
-                                    <NavLink to="/legal">Terms & Conditions</NavLink>
+                                    <NavLink to="/legal">
+                                        Terms & Conditions
+                                    </NavLink>
                                 </u>
                                 &nbsp;|&nbsp;
                                 <u>
-                                    <NavLink to="/privacy">Privacy Policy</NavLink>
+                                    <NavLink to="/privacy">
+                                        Privacy Policy
+                                    </NavLink>
                                 </u>
                             </p>
                             <p>© Prescryptive Health, Inc.</p>
