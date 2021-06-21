@@ -1,5 +1,8 @@
 .asTable {
+    padding-top: 10px;
     display: table;
+    border-spacing: 20px;
+    border-collapse: separate;
 }
 
 .asTable > div {
@@ -8,19 +11,22 @@
 
 .asTable > div > div {
     display: table-cell;
-    padding: 0px 15px 18px 15px;
 }
+
+/* https://stackoverflow.com/a/30352626 */
 
 .filterItem {
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: color 0.5s ease,
+                border 0.5s ease;
+    
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
 }
 
 .currentFilter {
     color: #6240a1;
-    text-decoration-line: underline;
-    text-decoration-thickness: 3px;
-    text-decoration-skip-ink: none;
+    border-bottom-color: #6240a1;
 }
 
 .inactive {
