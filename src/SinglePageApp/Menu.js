@@ -80,22 +80,13 @@ class UnconnectedMenu extends Component {
         
         this.state = {
             provider: "Please select your provider from the dropdown menu",
-            userHasMadeASelection: false,
-            contentReady: false
+            userHasMadeASelection: false
         };
     }
     render() {
-        var menuDivClass;
-        if (this.state.contentReady) {
-            menuDivClass = style.menuDiv;
-        } else {
-            menuDivClass = style.menuDiv + " " + style.invisible;
-        }
+        console.log(this.props);
         return (
-            <div 
-                className={menuDivClass}
-                onLoad={this.isContentReady.bind(this)}
-            >
+            <div className={style.menuDiv}>
                 <div>
                     <img src={logo} className={style.logo} alt="Prescryptive"/>
                     <select 
@@ -138,12 +129,6 @@ class UnconnectedMenu extends Component {
         this.setState({
             provider: e.target.value,
             userHasMadeASelection: true
-        });
-    }
-    
-    isContentReady() {
-        this.setState({
-            contentReady: true 
         });
     }
 }
