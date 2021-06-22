@@ -1,7 +1,6 @@
 import { Component } from "react";
-import { FadingTextTransition } from "./FadingTextTransition";
+import { TransitionGroup, CSSTransition  } from "react-transition-group";
 import style from "./index.module.css";
-
 import pdf from "../../assets/YakimaProgrammer/pdf.svg";
 import video from "../../assets/bootstrap-icons/camera-video-fill.svg";
 import external from "../../assets/bootstrap-icons/box-arrow-up-right.svg";
@@ -38,13 +37,47 @@ function getSelectedText() {
 }
 
 class Card extends Component {
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            fullTextShown: false
+        }
+    }
+    
     render() {
         var description;
         if (this.props.description.length > 57) {
-            description = <FadingTextTransition
-                shortText={this.props.description.slice(0,57)}
-                fullText={this.props.description}
-            />
+            let textComponent;
+            if (this.state.fullTextShown) {
+                textComponent = <CSSTransition 
+                    timeout={500} 
+                    classNames='fade'
+                    key={1}
+                >
+                    <span>
+                        {this.props.description}
+                    </span>
+                </CSSTransition>   
+            } else {
+                textComponent = <CSSTransition 
+                    timeout={500} 
+                    classNames='fade'
+                    key={0}
+                >
+                    <span>
+                        <span>{this.props.description.slice(0,57)}</span>
+                        <span 
+                            className={style.showMore}
+                            onClick={this.showMore.bind(this)}
+                        >...</span>
+                    </span>
+                </CSSTransition>
+            }
+            
+            description = <TransitionGroup>
+                {textComponent}
+            </TransitionGroup>
         } else {
             description = <p>{this.props.description}</p>;
         }
@@ -90,6 +123,13 @@ class Card extends Component {
         if (!getSelectedText()) {
             this.link.click();
         }
+    }
+    
+    showMore(e) {
+        e.stopPropagation();
+        this.setState({
+            fullTextShown: true
+        });
     }
 }
 
