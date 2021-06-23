@@ -2,10 +2,10 @@ import { Component } from "react";
 import { FadingTextTransition } from "./FadingTextTransition";
 import style from "./index.module.css";
 
-import pdf from "../assets/YakimaProgrammer/pdf.svg";
-import video from "../assets/bootstrap-icons/camera-video-fill.svg";
-import external from "../assets/bootstrap-icons/box-arrow-up-right.svg";
-import doc from "../assets/bootstrap-icons/file-earmark-text-fill.svg";
+import pdf from "../../assets/YakimaProgrammer/pdf.svg";
+import video from "../../assets/bootstrap-icons/camera-video-fill.svg";
+import external from "../../assets/bootstrap-icons/box-arrow-up-right.svg";
+import doc from "../../assets/bootstrap-icons/file-earmark-text-fill.svg";
 
 const resourceType = {
     video: {
@@ -70,7 +70,13 @@ class Card extends Component {
                         >
                             <img 
                                 src={resourceType[this.props.linkType].img} 
-                                className={style.icon}
+                                className={
+                                    style.icon + " " + 
+                                    (
+                                        this.props.linkType === "pdf" ?
+                                        null : style.shiftColors
+                                    )
+                                }
                                 alt=""
                             />
                             {resourceType[this.props.linkType].note}

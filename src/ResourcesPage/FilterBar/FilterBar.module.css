@@ -1,0 +1,36 @@
+.asTable {
+    padding-top: 10px;
+    display: table;
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+.asTable > div {
+    display: table-row;
+}
+
+.asTable > div > div {
+    display: table-cell;
+}
+
+/* https://stackoverflow.com/a/30352626 */
+
+.filterItem {
+    cursor: pointer;
+    transition: color 0.5s ease,
+                border 0.5s ease;
+    
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+
+.currentFilter {
+    color: #6240a1;
+    border-bottom-color: #6240a1;
+}
+
+.inactive {
+    /* This makes it seem like the filter option is disabled!
+    color: #9797a0;
+    */
+}

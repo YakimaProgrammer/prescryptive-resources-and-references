@@ -30,37 +30,37 @@
         "linkTo": "#"
     },
     {
-        "category": "Marketing materials",
+        "category": "Marketing Materials",
         "description": "NCPA Guidance for Community []",
         "linkType": "pdf",
         "linkTo": "#"
     },
     {
-        "category": "Marketing materials",
+        "category": "Marketing Materials",
         "description": "CDC Poster: How to put on PPE, How to []",
         "linkType": "pdf",
         "linkTo": "#"
     },
     {
-        "category": "Marketing materials",
+        "category": "Marketing Materials",
         "description": "APhA COVID-19: Demystifying Testing []",
         "linkType": "pdf",
         "linkTo": "#"
     },
     {
-        "category": "Marketing materials",
+        "category": "Marketing Materials",
         "description": "NCPA Best Practices: Applying for a CLIA []",
         "linkType": "pdf",
         "linkTo": "#"
     },
     {
-        "category": "Marketing materials",
+        "category": "Marketing Materials",
         "description": "Form for CLIA Certificate of Waiver.",
         "linkType": "pdf",
         "linkTo": "#"
     },
     {
-        "category": "Marketing materials",
+        "category": "Marketing Materials",
         "description": "MMWRL Good Lab Practices for CLIA-W []",
         "linkType": "pdf",
         "linkTo": "#"
@@ -75,12 +75,6 @@
         "category": "Training",
         "description": "Prescryptive Pharmacy Relations.",
         "linkType": "external",
-        "linkTo": "#"
-    },
-    {
-        "category": "TESTING",
-        "description": "Prescryptive Platform Manual. Welcome to Pharmacy portal. Financial Set-Up, Payer Sheet. Prescryptive Pharmacy Relations. Form for CLIA Certificate of Waiver. Billing instructions for Antigen testing.",
-        "linkType": "pdf",
         "linkTo": "#"
     }
 ]
