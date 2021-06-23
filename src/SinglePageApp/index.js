@@ -42,7 +42,7 @@ const Routes = withRouter(props => <RoutesComponent {...props} />);
 class SPA extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <div className={style.asTable}>
                     <div>
                         <div className={style.menu}>
