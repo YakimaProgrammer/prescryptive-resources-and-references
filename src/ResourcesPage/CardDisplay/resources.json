@@ -76,11 +76,5 @@
         "description": "Prescryptive Pharmacy Relations.",
         "linkType": "external",
         "linkTo": "#"
-    },
-    {
-        "category": "TESTING",
-        "description": "Prescryptive Platform Manual. Welcome to Pharmacy portal. Financial Set-Up, Payer Sheet. Prescryptive Pharmacy Relations. Form for CLIA Certificate of Waiver. Billing instructions for Antigen testing.",
-        "linkType": "pdf",
-        "linkTo": "#"
     }
 ]
