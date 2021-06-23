@@ -25,7 +25,7 @@ class RoutesComponent extends Component {
                             />
                             <Route 
                                 path={["/appointments", "/customers", "/report",
-                                     "/hours", "/service", "/signOut", "/legal",
+                                     "/hours", "/service", "/signout", "/legal",
                                      "/privacy"]} 
                                 component={PlaceholderPage}
                             />

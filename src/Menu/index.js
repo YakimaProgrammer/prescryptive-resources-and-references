@@ -68,7 +68,7 @@ const SETTINGS = [
         pageName: "Helpful resources"
     },
     {
-        linkTo: "/signOut",
+        linkTo: "/signout",
         icon: person,
         pageName: "Sign out"
     }

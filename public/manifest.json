@@ -3,8 +3,8 @@
   "name": "Prescryptive - Helpful Resources and References",
   "icons": [
     {
-      "src": "/logo.png",
-      "sizes": "140x140",
+      "src": "logo.png",
+      "sizes": "144x144",
       "type": "image/png"
     }
   ],
