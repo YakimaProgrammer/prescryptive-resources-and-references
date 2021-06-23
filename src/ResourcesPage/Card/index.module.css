@@ -45,8 +45,11 @@
 }
 
 .icon {
-    filter: invert(45%) sepia(26%) saturate(2724%) 
-            hue-rotate(163deg) brightness(100%) contrast(95%);
     padding: 5px;
     vertical-align: middle;
+}
+
+.shiftColors {
+    filter: invert(45%) sepia(26%) saturate(2724%) 
+        hue-rotate(163deg) brightness(100%) contrast(95%);
 }

@@ -70,7 +70,13 @@ class Card extends Component {
                         >
                             <img 
                                 src={resourceType[this.props.linkType].img} 
-                                className={style.icon}
+                                className={
+                                    style.icon + " " + 
+                                    (
+                                        this.props.linkType === "pdf" ?
+                                        null : style.shiftColors
+                                    )
+                                }
                                 alt=""
                             />
                             {resourceType[this.props.linkType].note}
