@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* https://ui.dev/react-router-v5-animated-transitions/ */
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity .75s ease;
+}
+
+.fade-exit {
+    opacity: 0;
+    display: none;
+}

@@ -1,0 +1,80 @@
+[
+    {
+        "category": "Training",
+        "description": "Prescryptive Platform Manual.",
+        "linkType": "external",
+        "linkTo": "#"
+    },
+    {
+        "category": "Training",
+        "description": "Welcome to Pharmacy portal.",
+        "linkType": "video",
+        "linkTo": "#"
+    },
+    {
+        "category": "Billing Instructions",
+        "description": "Financial Set-Up, Payer Sheet.",
+        "linkType": "document",
+        "linkTo": "#"
+    },
+    {
+        "category": "Billing Instructions",
+        "description": "Billing instructions for PCR Testing.",
+        "linkType": "document",
+        "linkTo": "#"
+    },
+    {
+        "category": "Billing Instructions",
+        "description": "Billing instructions for Antigen testing.",
+        "linkType": "document",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing Materials",
+        "description": "NCPA Guidance for Community []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing Materials",
+        "description": "CDC Poster: How to put on PPE, How to []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing Materials",
+        "description": "APhA COVID-19: Demystifying Testing []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing Materials",
+        "description": "NCPA Best Practices: Applying for a CLIA []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing Materials",
+        "description": "Form for CLIA Certificate of Waiver.",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Marketing Materials",
+        "description": "MMWRL Good Lab Practices for CLIA-W []",
+        "linkType": "pdf",
+        "linkTo": "#"
+    },
+    {
+        "category": "Training",
+        "description": "Pharmacists Authorized To Order []",
+        "linkType": "external",
+        "linkTo": "#"
+    },
+    {
+        "category": "Training",
+        "description": "Prescryptive Pharmacy Relations.",
+        "linkType": "external",
+        "linkTo": "#"
+    }
+]
